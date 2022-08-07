@@ -4,17 +4,20 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: 
   `
-    <app-title title="Olá Mundo"></app-title>
+    <app-title *ngIf="destruir"></app-title>
+    <br>
+    <button (click)="destruirComponent()">Destruir componente</button>
     <router-outlet></router-outlet>
   `,
 })
 export class AppComponent implements OnInit{
+  public destruir:boolean = true;
   constructor() {}
 
-  ngOnInit(): void {
-    setTimeout(()=> {
-      console.log(1);
-    }, 5000) 
+  ngOnInit(): void {    
+  }
+  public destruirComponent() {
+    this.destruir = false;
   }
 }
 
