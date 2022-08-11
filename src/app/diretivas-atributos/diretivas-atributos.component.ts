@@ -15,9 +15,6 @@ export class DiretivasAtributosComponent implements OnInit {
     this.list.push({nome: this.nome});
     this.nome = "";
   }
-  public limpar() {
-    
-  }
   constructor() { }
 
   public list: Array<{ nome: string }> = [];
