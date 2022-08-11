@@ -23,7 +23,21 @@
     [{{ i }}] - {{ item.nome }} - {{ item.idade }} anos.
   </li>
 </ul>
-
 <button (click)="clickOnAddList()" >Clicar</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'oscar'">
+    Oscar
+  </p>
+  <p *ngSwitchCase="'isis'">
+    Isis
+  </p>
+  <p *ngSwitchDefault>
+    Busca não encontrada
+  </p>
+</div>
 
 
