@@ -13,6 +13,7 @@ export class DiretivasEstruturaisComponent implements OnInit {
   ];
   public condition: boolean = true;
   public conditionClick: boolean = true;
+  
   public nome: string = ''
 
   constructor() { }
@@ -44,3 +45,5 @@ export class DiretivasEstruturaisComponent implements OnInit {
   }
 
 }
+
+
