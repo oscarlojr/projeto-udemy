@@ -1,1 +1,11 @@
-<p [ngClass]="{'active': valor, 'disabled': !valor}">Alterando atributos</p>
+<p [ngClass]="{'active': valor, 'disabled': !valor}">Alterando atributos de classe css</p>
+<p [ngStyle]="{'height': heightPx, 'background': background}">Alterando atributos no HTML</p>
+
+<hr>
+
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+
+<div *ngIf="nome != 'limpar'">
+  <li *ngFor="let item of list">{{item.nome}}</li>
+</div>  
