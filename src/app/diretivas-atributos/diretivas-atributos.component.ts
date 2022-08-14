@@ -17,7 +17,7 @@ export class DiretivasAtributosComponent implements OnInit {
   }
   constructor() { }
 
-  public list: Array<{ nome: string }> = [];
+  public list: Array<{ nome: string }> = [{nome: "Oscar Junior"}];
 
   ngOnInit(): void {
     setInterval (() => {
