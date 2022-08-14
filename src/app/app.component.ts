@@ -15,7 +15,10 @@ import { Component, OnInit } from '@angular/core';
     <!--
       <app-diretivas-estruturais></app-diretivas-estruturais>
     -->
-    <app-diretivas-atributos></app-diretivas-atributos>
+    <app-diretivas-atributos>
+      <h1>Aulas de diretivas de atributo</h1>
+      <h3>Fim do bloco</h3>
+    </app-diretivas-atributos>
     <router-outlet></router-outlet>
   `,
 })

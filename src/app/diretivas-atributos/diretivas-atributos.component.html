@@ -1,4 +1,5 @@
-<!-- <p [ngClass]="{'active': valor, 'disabled': !valor}">Alterando atributos de classe css</p>
+<ng-content select="h1"></ng-content>
+<p [ngClass]="{'active': valor, 'disabled': !valor}">Alterando atributos de classe css</p>
 <p [ngStyle]="{'height': heightPx, 'background': background}">Alterando atributos no HTML</p>
 
 <hr>
@@ -8,7 +9,7 @@
 
 <div *ngIf="nome != 'limpar'">
   <li *ngFor="let item of list">{{item.nome}}</li>
-</div>   -->
+</div>  
 
 <input [(ngModel)]="nome">
 <button (click)="salvar()">Salvar</button>
@@ -16,4 +17,4 @@
 <ng-template ngFor let-item [ngForOf]="list">
   <p>{{item.nome}}</p>
 </ng-template>
-
+<ng-content select="h3"></ng-content>
