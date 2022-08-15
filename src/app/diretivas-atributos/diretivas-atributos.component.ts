@@ -19,6 +19,8 @@ export class DiretivasAtributosComponent implements OnInit {
 
   public list: Array<{ nome: string }> = [{nome: "Oscar Junior"}];
 
+  public data: Date = new Date();
+
   ngOnInit(): void {
     setInterval (() => {
       if(this.valor){
