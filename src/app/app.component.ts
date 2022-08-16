@@ -19,17 +19,23 @@ import { Component, OnInit } from '@angular/core';
       <app-diretivas-atributos>
         <h1>Aulas de diretivas de atributo</h1>
         <h3>Fim do bloco</h3>
-      </app-diretivas-atributos>
+      </app-diretivas-atributos>   
+      <app-diretivas-atributos></app-diretivas-atributos>
+      <app-new-component></app-new-component>
     -->
-    <app-diretivas-atributos></app-diretivas-atributos>
-
-    <app-new-component></app-new-component>
+    <app-input [contador]='addValue'></app-input>
+    <button (click)="add()">Add</button>
     <router-outlet></router-outlet>
   `,
 })
 export class AppComponent implements OnInit{
-  
+  public addValue: number = 0;
+
   constructor() {}
+
+  public add(){
+    this.addValue += 1;
+  }
 
   ngOnInit(): void {    
   }
