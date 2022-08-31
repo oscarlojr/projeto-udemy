@@ -33,7 +33,7 @@ import { Component, OnInit } from '@angular/core';
       <h2>{{ getDados.idade }}</h2>
     </ng-template>
     <app-output (enviarDados)="setDados($event)"></app-output>
-
+    <app-food-list></app-food-list>
     <router-outlet></router-outlet>
   `,
 })
