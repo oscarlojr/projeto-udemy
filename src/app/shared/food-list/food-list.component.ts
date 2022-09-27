@@ -14,16 +14,37 @@ export class FoodListComponent implements OnInit {
   constructor(private foodListService: FoodListService) { }
 
   ngOnInit(): void {
+    this.foodListService.foodList().subscribe(
+      res => this.foodList = res,
+      error => console.log(error)
+    );
+    
     this.foodListService.emitEvent.subscribe(
-      res => {
-        alert(`Este é o item adicionado: ${res.nome}`);
+      res => { 
+        alert (`Você add => ${res.nome}`);
         return this.foodList.push(res);
       }
     );
-    this.foodListService.foodList().subscribe(
-      res => this.foodList = res,
+  }
+  public foodListEdit(value: string, id: number){
+    this.foodListService.foodListEdit(value,id).subscribe(
+      res => {
+        return console.log(res)
+      },
       error => error
-    );
+    )
   }
 
+  public foodListDelete(id: number){
+    return this.foodListService.foodListDelete(id).subscribe(
+      res => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id
+          }
+        )
+      },
+      error => error 
+    )
+  }
 }
