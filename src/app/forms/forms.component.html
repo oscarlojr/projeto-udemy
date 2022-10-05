@@ -1,0 +1,9 @@
+<h2>Aula sobre formulários</h2>
+<form #form="ngForm">
+  <label>
+    Nome: 
+    <input type="text" name="nome" ngModel>
+  </label>
+</form>
+
+{{ form.value | json }}

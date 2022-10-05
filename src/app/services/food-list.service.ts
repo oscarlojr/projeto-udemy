@@ -1,6 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+// Module Interface
 import { Foodlist } from '../module/foodlist';
 
 @Injectable({
@@ -15,9 +17,16 @@ export class FoodListService {
     "Lasanha",
     "Pizza",
   ];
-  constructor(private http: HttpClient) { }
+
+  private httpOptions = {
+    headers: new HttpHeaders ({
+      'Content-Type': 'application/json',
+    })
+  }  
 
   private url: string = "http://localhost:3000/"; //list-food
+
+  constructor(private http: HttpClient) { }
 
   public foodList(): Observable <Array<Foodlist>> {
     return this.http.get<Array<Foodlist>>(`${this.url}list-food`).pipe(

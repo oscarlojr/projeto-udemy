@@ -37,6 +37,8 @@ import { Component, OnInit } from '@angular/core';
     <app-food-add></app-food-add>
     <app-food-list></app-food-list>
     <router-outlet></router-outlet>
+    <br>
+    <app-forms></app-forms>
   `,
 })
 export class AppComponent implements OnInit{
