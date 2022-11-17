@@ -2,8 +2,16 @@
 <form #form="ngForm">
   <label>
     Nome: 
-    <input type="text" name="nome" ngModel>
+    <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
+    <span *ngIf=" !nome.valid && (nome.dirty && nome.touched)">
+      Por favor, preencha o campo!
+    </span>
   </label>
+  <br>
+  <br>
+  {{ nome.valid }}
+  {{ nome.dirty }}
+  {{ nome.touched }}
   <br>
   <br>
   <label>
