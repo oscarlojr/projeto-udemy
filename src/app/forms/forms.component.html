@@ -1,5 +1,5 @@
 <h2>Aula sobre formulários</h2>
-<form #form="ngForm">
+<form #form="ngForm" (ngSubmit)="submitForm(form)">
   <label>
     Nome: 
     <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
@@ -60,6 +60,8 @@
 
   <br>
   <br>
+
+  <button [disabled]="form.invalid" >Enviar Dados</button>
 </form>
 
 {{ form.value | json }}
