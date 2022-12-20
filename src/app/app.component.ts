@@ -39,6 +39,8 @@ import { Component, OnInit } from '@angular/core';
     <router-outlet></router-outlet>
     <br>
     <app-forms></app-forms>
+    <br>
+    <app-reactive-forms></app-reactive-forms>
   `,
 })
 export class AppComponent implements OnInit{
