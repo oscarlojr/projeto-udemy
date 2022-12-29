@@ -3,18 +3,26 @@
     Nome: 
     <input type="text" formControlName ="firstName">
     <span 
-    class="alert"
-    *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched || cadastroForm.get('firstName')?.dirty)">Favor digite seu nome</span>
+      class="alert"
+      *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched || cadastroForm.get('firstName')?.dirty)">Favor digite seu nome
+    </span>
   </label>
   <br>
   <label>
     Sobrenome:
     <input type="text" formControlName ="lastName">
+    <span 
+      class="alert"
+      *ngIf="cadastroForm.get('lastName')?.errors && (cadastroForm.get('lastName')?.touched || cadastroForm.get('lastName')?.dirty)">
+        Favor digite o valor mínimo de {{ cadastroForm.get('lastName')?.errors?.['minlength']?.requiredLength}} caracteres, você já digitou {{ cadastroForm.get('lastName')?.errors?.['minlength']?.actualLength }}
+    </span>
   </label>
   <p>
-    {{ cadastroForm.get('firstName')?.errors | json }}
+    <!-- {{ cadastroForm.get('firstName')?.errors | json }}
     {{ cadastroForm.get('firstName')?.touched | json }}
-    {{ cadastroForm.get('firstName')?.dirty | json }}
+    {{ cadastroForm.get('firstName')?.dirty | json }} -->
+
+    {{ cadastroForm.get('lastName')?.errors | json }}
   </p>
   <button [disabled]="cadastroForm.invalid">Enviar</button>
 </form>
