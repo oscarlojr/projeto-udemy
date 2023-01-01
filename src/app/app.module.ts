@@ -12,6 +12,9 @@ import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atr
 import { SharedModule } from './shared/shared.module';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     DiretivasAtributosComponent,
     FormsComponent,
     ReactiveFormsComponent,
+    HomeComponent,
+    SobreComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

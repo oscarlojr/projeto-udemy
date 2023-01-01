@@ -42,7 +42,10 @@ import { Component, OnInit } from '@angular/core';
       <app-forms></app-forms>
       <br>
     -->
-    <app-reactive-forms></app-reactive-forms>
+    <!--
+      <app-reactive-forms></app-reactive-forms>
+    -->
+    <router-outlet></router-outlet>
   `,
 })
 export class AppComponent implements OnInit{
