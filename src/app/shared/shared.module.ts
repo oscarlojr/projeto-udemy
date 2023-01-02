@@ -10,6 +10,7 @@ import { OutputComponent } from './output/output.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodAddComponent } from './food-add/food-add.component';
 import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -34,7 +35,8 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

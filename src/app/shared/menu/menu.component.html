@@ -2,13 +2,13 @@
   <nav>
     <ul>
       <li>
-        <a routerLink="/">Home</a>        
+        <a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a>        
       </li>
       <li>
-        <a routerLink="/sobre">Sobre</a>        
+        <a [routerLink]="['/sobre']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Sobre</a>        
       </li>
       <li>
-        <a routerLink="/404">PageError</a>     
+        <a [routerLink]="['/404']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">PageError</a>     
       </li>
     </ul>
   </nav>

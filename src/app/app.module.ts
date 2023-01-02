@@ -15,6 +15,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -36,7 +37,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
