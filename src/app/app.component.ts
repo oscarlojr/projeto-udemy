@@ -45,6 +45,7 @@ import { Component, OnInit } from '@angular/core';
     <!--
       <app-reactive-forms></app-reactive-forms>
     -->
+    <app-menu></app-menu>
     <router-outlet></router-outlet>
   `,
 })

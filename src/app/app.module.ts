@@ -17,6 +17,7 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

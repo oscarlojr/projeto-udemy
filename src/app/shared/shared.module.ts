@@ -9,6 +9,7 @@ import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodAddComponent } from './food-add/food-add.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -19,14 +20,16 @@ import { FoodAddComponent } from './food-add/food-add.component';
     InputComponent, 
     OutputComponent, 
     FoodListComponent, 
-    FoodAddComponent
+    FoodAddComponent,
+    MenuComponent
   ],
   exports: [
     NewComponentComponent, 
     InputComponent, 
     OutputComponent, 
     FoodListComponent,
-    FoodAddComponent
+    FoodAddComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,
