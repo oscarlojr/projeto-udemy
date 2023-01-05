@@ -10,7 +10,10 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 const routes: Routes = [
   //{ path: '',component: ReactiveFormsComponent, pathMatch: 'full' }
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'sobre/:id/:username', component: SobreComponent },
+  { path: 'sobre', component: SobreComponent, children: [
+    { path: 'empresa', component: SobreComponent },
+    { path: 'pessoas', component: SobreComponent },
+  ]},
   { path: '404', component: ErrorPageComponent },
   { path: '**', redirectTo: '404' }
 ];
